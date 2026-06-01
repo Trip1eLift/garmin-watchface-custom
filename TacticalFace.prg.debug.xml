@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/josephchang/Documents/code/garmin-watchface-custom/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/gen/006-B4223-00/source/Rez.mcgen" id="1" lineNum="7" parent="globals/Rez" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc" id="2" lineNum="5" parent="globals/WatchFaceApp" pc="268435480" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="3" lineNum="76" parent="globals/WatchFaceView" pc="268435492" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc" id="4" lineNum="11" parent="globals/WatchFaceApp" pc="268435504" symbol="onStart"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc" id="5" lineNum="17" parent="globals/WatchFaceApp" pc="268435507" symbol="getInitialView"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc" id="5" lineNum="18" parent="globals/WatchFaceApp" pc="268435509" symbol="getInitialView"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc" id="6" lineNum="7" parent="globals/WatchFaceApp" pc="268435535" symbol="initialize"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc" id="6" lineNum="8" parent="globals/WatchFaceApp" pc="268435537" symbol="initialize"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc" id="7" lineNum="14" parent="globals/WatchFaceApp" pc="268435550" symbol="onStop"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="8" lineNum="437" parent="globals/WatchFaceView" pc="268435553" symbol="&lt;globals/WatchFaceView/&lt;&gt;_refreshComplications&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="8" lineNum="438" parent="globals/WatchFaceView" pc="268435555" symbol="&lt;globals/WatchFaceView/&lt;&gt;_refreshComplications&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="8" lineNum="438" parent="globals/WatchFaceView" pc="268435571" symbol="&lt;globals/WatchFaceView/&lt;&gt;_refreshComplications&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="8" lineNum="439" parent="globals/WatchFaceView" pc="268435575" symbol="&lt;globals/WatchFaceView/&lt;&gt;_refreshComplications&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="8" lineNum="440" parent="globals/WatchFaceView" pc="268435595" symbol="&lt;globals/WatchFaceView/&lt;&gt;_refreshComplications&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="8" lineNum="441" parent="globals/WatchFaceView" pc="268435615" symbol="&lt;globals/WatchFaceView/&lt;&gt;_refreshComplications&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="8" lineNum="442" parent="globals/WatchFaceView" pc="268435635" symbol="&lt;globals/WatchFaceView/&lt;&gt;_refreshComplications&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="8" lineNum="443" parent="globals/WatchFaceView" pc="268435655" symbol="&lt;globals/WatchFaceView/&lt;&gt;_refreshComplications&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="8" lineNum="443" parent="globals/WatchFaceView" pc="268435664" symbol="&lt;globals/WatchFaceView/&lt;&gt;_refreshComplications&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="9" lineNum="320" parent="globals/WatchFaceView" pc="268435688" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawMsgBubble&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="9" lineNum="322" parent="globals/WatchFaceView" pc="268435691" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawMsgBubble&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="9" lineNum="323" parent="globals/WatchFaceView" pc="268435695" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawMsgBubble&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="9" lineNum="324" parent="globals/WatchFaceView" pc="268435699" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawMsgBubble&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="9" lineNum="325" parent="globals/WatchFaceView" pc="268435703" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawMsgBubble&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="9" lineNum="326" parent="globals/WatchFaceView" pc="268435720" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawMsgBubble&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="9" lineNum="327" parent="globals/WatchFaceView" pc="268435752" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawMsgBubble&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="9" lineNum="330" parent="globals/WatchFaceView" pc="268435859" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawMsgBubble&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="9" lineNum="331" parent="globals/WatchFaceView" pc="268435872" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawMsgBubble&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="272" parent="globals/WatchFaceView" pc="268435897" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="273" parent="globals/WatchFaceView" pc="268435900" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="274" parent="globals/WatchFaceView" pc="268435912" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="275" parent="globals/WatchFaceView" pc="268435928" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="278" parent="globals/WatchFaceView" pc="268435944" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="279" parent="globals/WatchFaceView" pc="268435959" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="280" parent="globals/WatchFaceView" pc="268435977" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="281" parent="globals/WatchFaceView" pc="268435992" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="283" parent="globals/WatchFaceView" pc="268436009" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="284" parent="globals/WatchFaceView" pc="268436026" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="286" parent="globals/WatchFaceView" pc="268436047" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="288" parent="globals/WatchFaceView" pc="268436054" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="289" parent="globals/WatchFaceView" pc="268436071" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="291" parent="globals/WatchFaceView" pc="268436095" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="293" parent="globals/WatchFaceView" pc="268436102" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="294" parent="globals/WatchFaceView" pc="268436119" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="298" parent="globals/WatchFaceView" pc="268436140" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="299" parent="globals/WatchFaceView" pc="268436153" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="300" parent="globals/WatchFaceView" pc="268436166" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="301" parent="globals/WatchFaceView" pc="268436170" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="302" parent="globals/WatchFaceView" pc="268436180" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="305" parent="globals/WatchFaceView" pc="268436191" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="306" parent="globals/WatchFaceView" pc="268436203" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="307" parent="globals/WatchFaceView" pc="268436206" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="307" parent="globals/WatchFaceView" pc="268436217" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="308" parent="globals/WatchFaceView" pc="268436229" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="309" parent="globals/WatchFaceView" pc="268436239" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="312" parent="globals/WatchFaceView" pc="268436257" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="313" parent="globals/WatchFaceView" pc="268436273" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="10" lineNum="314" parent="globals/WatchFaceView" pc="268436290" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="11" lineNum="405" parent="globals/WatchFaceView" pc="268436330" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="11" lineNum="406" parent="globals/WatchFaceView" pc="268436333" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="11" lineNum="407" parent="globals/WatchFaceView" pc="268436366" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="11" lineNum="408" parent="globals/WatchFaceView" pc="268436372" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="12" lineNum="123" parent="globals/WatchFaceView" pc="268436398" symbol="onComplicationChange"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="12" lineNum="124" parent="globals/WatchFaceView" pc="268436400" symbol="onComplicationChange"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="12" lineNum="125" parent="globals/WatchFaceView" pc="268436407" symbol="onComplicationChange"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="13" lineNum="446" parent="globals/WatchFaceView" pc="268436419" symbol="&lt;globals/WatchFaceView/&lt;&gt;_cv&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="13" lineNum="447" parent="globals/WatchFaceView" pc="268436422" symbol="&lt;globals/WatchFaceView/&lt;&gt;_cv&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="13" lineNum="447" parent="globals/WatchFaceView" pc="268436428" symbol="&lt;globals/WatchFaceView/&lt;&gt;_cv&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="13" lineNum="448" parent="globals/WatchFaceView" pc="268436433" symbol="&lt;globals/WatchFaceView/&lt;&gt;_cv&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="13" lineNum="449" parent="globals/WatchFaceView" pc="268436449" symbol="&lt;globals/WatchFaceView/&lt;&gt;_cv&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="193" parent="globals/WatchFaceView" pc="268436467" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="194" parent="globals/WatchFaceView" pc="268436470" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="195" parent="globals/WatchFaceView" pc="268436474" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="196" parent="globals/WatchFaceView" pc="268436481" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="197" parent="globals/WatchFaceView" pc="268436488" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="199" parent="globals/WatchFaceView" pc="268436495" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="200" parent="globals/WatchFaceView" pc="268436510" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="201" parent="globals/WatchFaceView" pc="268436522" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="202" parent="globals/WatchFaceView" pc="268436528" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="203" parent="globals/WatchFaceView" pc="268436553" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="204" parent="globals/WatchFaceView" pc="268436564" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="205" parent="globals/WatchFaceView" pc="268436603" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="207" parent="globals/WatchFaceView" pc="268436621" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="208" parent="globals/WatchFaceView" pc="268436643" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="209" parent="globals/WatchFaceView" pc="268436670" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="213" parent="globals/WatchFaceView" pc="268436710" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="214" parent="globals/WatchFaceView" pc="268436722" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="215" parent="globals/WatchFaceView" pc="268436739" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="218" parent="globals/WatchFaceView" pc="268436781" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="219" parent="globals/WatchFaceView" pc="268436784" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="220" parent="globals/WatchFaceView" pc="268436801" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="220" parent="globals/WatchFaceView" pc="268436817" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="222" parent="globals/WatchFaceView" pc="268436823" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="223" parent="globals/WatchFaceView" pc="268436842" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="224" parent="globals/WatchFaceView" pc="268436859" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="227" parent="globals/WatchFaceView" pc="268436878" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="228" parent="globals/WatchFaceView" pc="268436895" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="231" parent="globals/WatchFaceView" pc="268436915" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="14" lineNum="232" parent="globals/WatchFaceView" pc="268436932" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="15" lineNum="461" parent="globals/WatchFaceView" pc="268436953" symbol="&lt;globals/WatchFaceView/&lt;&gt;_hline&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="15" lineNum="462" parent="globals/WatchFaceView" pc="268436955" symbol="&lt;globals/WatchFaceView/&lt;&gt;_hline&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="16" lineNum="428" parent="globals/WatchFaceView" pc="268436988" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawHeart&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="16" lineNum="429" parent="globals/WatchFaceView" pc="268436990" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawHeart&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="16" lineNum="430" parent="globals/WatchFaceView" pc="268437007" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawHeart&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="16" lineNum="431" parent="globals/WatchFaceView" pc="268437029" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawHeart&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="16" lineNum="432" parent="globals/WatchFaceView" pc="268437051" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawHeart&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="17" lineNum="413" parent="globals/WatchFaceView" pc="268437178" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawCrosshair&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="17" lineNum="414" parent="globals/WatchFaceView" pc="268437181" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawCrosshair&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="17" lineNum="415" parent="globals/WatchFaceView" pc="268437214" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawCrosshair&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="17" lineNum="416" parent="globals/WatchFaceView" pc="268437220" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawCrosshair&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="18" lineNum="115" parent="globals/WatchFaceView" pc="268437246" symbol="onHide"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="18" lineNum="116" parent="globals/WatchFaceView" pc="268437249" symbol="onHide"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="18" lineNum="116" parent="globals/WatchFaceView" pc="268437265" symbol="onHide"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="18" lineNum="117" parent="globals/WatchFaceView" pc="268437269" symbol="onHide"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="18" lineNum="118" parent="globals/WatchFaceView" pc="268437315" symbol="onHide"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="18" lineNum="119" parent="globals/WatchFaceView" pc="268437331" symbol="onHide"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="18" lineNum="119" parent="globals/WatchFaceView" pc="268437340" symbol="onHide"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="239" parent="globals/WatchFaceView" pc="268437372" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="240" parent="globals/WatchFaceView" pc="268437375" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="241" parent="globals/WatchFaceView" pc="268437398" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="242" parent="globals/WatchFaceView" pc="268437437" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="243" parent="globals/WatchFaceView" pc="268437441" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="244" parent="globals/WatchFaceView" pc="268437445" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="245" parent="globals/WatchFaceView" pc="268437449" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="246" parent="globals/WatchFaceView" pc="268437462" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="247" parent="globals/WatchFaceView" pc="268437473" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="250" parent="globals/WatchFaceView" pc="268437480" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="251" parent="globals/WatchFaceView" pc="268437496" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="254" parent="globals/WatchFaceView" pc="268437517" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="255" parent="globals/WatchFaceView" pc="268437528" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="256" parent="globals/WatchFaceView" pc="268437541" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="257" parent="globals/WatchFaceView" pc="268437548" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="258" parent="globals/WatchFaceView" pc="268437558" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="259" parent="globals/WatchFaceView" pc="268437566" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="260" parent="globals/WatchFaceView" pc="268437580" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="261" parent="globals/WatchFaceView" pc="268437601" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="262" parent="globals/WatchFaceView" pc="268437609" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="263" parent="globals/WatchFaceView" pc="268437622" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="264" parent="globals/WatchFaceView" pc="268437629" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="19" lineNum="265" parent="globals/WatchFaceView" pc="268437643" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="20" lineNum="177" parent="globals/WatchFaceView" pc="268437678" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawGrid&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="20" lineNum="178" parent="globals/WatchFaceView" pc="268437680" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawGrid&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="20" lineNum="179" parent="globals/WatchFaceView" pc="268437696" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawGrid&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="20" lineNum="180" parent="globals/WatchFaceView" pc="268437708" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawGrid&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="20" lineNum="182" parent="globals/WatchFaceView" pc="268437724" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawGrid&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="20" lineNum="183" parent="globals/WatchFaceView" pc="268437741" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawGrid&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="20" lineNum="185" parent="globals/WatchFaceView" pc="268437758" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawGrid&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="20" lineNum="186" parent="globals/WatchFaceView" pc="268437776" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawGrid&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="20" lineNum="188" parent="globals/WatchFaceView" pc="268437794" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawGrid&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="20" lineNum="189" parent="globals/WatchFaceView" pc="268437814" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawGrid&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="21" lineNum="421" parent="globals/WatchFaceView" pc="268437835" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawCaloriesIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="21" lineNum="422" parent="globals/WatchFaceView" pc="268437838" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawCaloriesIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="21" lineNum="423" parent="globals/WatchFaceView" pc="268437871" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawCaloriesIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="21" lineNum="424" parent="globals/WatchFaceView" pc="268437877" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawCaloriesIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="22" lineNum="105" parent="globals/WatchFaceView" pc="268437903" symbol="onShow"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="22" lineNum="106" parent="globals/WatchFaceView" pc="268437906" symbol="onShow"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="22" lineNum="106" parent="globals/WatchFaceView" pc="268437922" symbol="onShow"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="22" lineNum="107" parent="globals/WatchFaceView" pc="268437926" symbol="onShow"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="22" lineNum="108" parent="globals/WatchFaceView" pc="268437952" symbol="onShow"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="22" lineNum="109" parent="globals/WatchFaceView" pc="268437990" symbol="onShow"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="22" lineNum="110" parent="globals/WatchFaceView" pc="268438006" symbol="onShow"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="22" lineNum="110" parent="globals/WatchFaceView" pc="268438015" symbol="onShow"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="22" lineNum="112" parent="globals/WatchFaceView" pc="268438046" symbol="onShow"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="22" lineNum="112" parent="globals/WatchFaceView" pc="268438055" symbol="onShow"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="337" parent="globals/WatchFaceView" pc="268438077" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="338" parent="globals/WatchFaceView" pc="268438080" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="339" parent="globals/WatchFaceView" pc="268438116" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="340" parent="globals/WatchFaceView" pc="268438132" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="341" parent="globals/WatchFaceView" pc="268438149" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="344" parent="globals/WatchFaceView" pc="268438169" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="345" parent="globals/WatchFaceView" pc="268438199" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="346" parent="globals/WatchFaceView" pc="268438216" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="347" parent="globals/WatchFaceView" pc="268438233" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="350" parent="globals/WatchFaceView" pc="268438254" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="351" parent="globals/WatchFaceView" pc="268438284" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="352" parent="globals/WatchFaceView" pc="268438301" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="23" lineNum="353" parent="globals/WatchFaceView" pc="268438318" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="24" lineNum="165" parent="globals/WatchFaceView" pc="268438340" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDate&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="24" lineNum="166" parent="globals/WatchFaceView" pc="268438343" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDate&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="24" lineNum="167" parent="globals/WatchFaceView" pc="268438368" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDate&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="24" lineNum="168" parent="globals/WatchFaceView" pc="268438375" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDate&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="24" lineNum="169" parent="globals/WatchFaceView" pc="268438408" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDate&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="24" lineNum="170" parent="globals/WatchFaceView" pc="268438425" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDate&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="25" lineNum="456" parent="globals/WatchFaceView" pc="268438447" symbol="&lt;globals/WatchFaceView/&lt;&gt;_compass&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="25" lineNum="457" parent="globals/WatchFaceView" pc="268438450" symbol="&lt;globals/WatchFaceView/&lt;&gt;_compass&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="25" lineNum="458" parent="globals/WatchFaceView" pc="268438457" symbol="&lt;globals/WatchFaceView/&lt;&gt;_compass&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="26" lineNum="103" parent="globals/WatchFaceView" pc="268438489" symbol="onLayout"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="27" lineNum="465" parent="globals/WatchFaceView" pc="268438492" symbol="&lt;globals/WatchFaceView/&lt;&gt;_vline&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="27" lineNum="466" parent="globals/WatchFaceView" pc="268438494" symbol="&lt;globals/WatchFaceView/&lt;&gt;_vline&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="374" parent="globals/WatchFaceView" pc="268438513" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="377" parent="globals/WatchFaceView" pc="268438516" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="378" parent="globals/WatchFaceView" pc="268438539" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="379" parent="globals/WatchFaceView" pc="268438590" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="380" parent="globals/WatchFaceView" pc="268438606" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="381" parent="globals/WatchFaceView" pc="268438657" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="382" parent="globals/WatchFaceView" pc="268438673" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="383" parent="globals/WatchFaceView" pc="268438697" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="386" parent="globals/WatchFaceView" pc="268438769" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="387" parent="globals/WatchFaceView" pc="268438793" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="388" parent="globals/WatchFaceView" pc="268438817" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="389" parent="globals/WatchFaceView" pc="268438841" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="390" parent="globals/WatchFaceView" pc="268438857" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="391" parent="globals/WatchFaceView" pc="268438881" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="392" parent="globals/WatchFaceView" pc="268438897" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="394" parent="globals/WatchFaceView" pc="268438921" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="396" parent="globals/WatchFaceView" pc="268438969" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="397" parent="globals/WatchFaceView" pc="268438985" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="28" lineNum="398" parent="globals/WatchFaceView" pc="268438991" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="29" lineNum="358" parent="globals/WatchFaceView" pc="268439017" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBottomRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="29" lineNum="359" parent="globals/WatchFaceView" pc="268439020" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBottomRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="29" lineNum="361" parent="globals/WatchFaceView" pc="268439050" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBottomRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="29" lineNum="362" parent="globals/WatchFaceView" pc="268439055" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBottomRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="29" lineNum="363" parent="globals/WatchFaceView" pc="268439088" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBottomRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="29" lineNum="364" parent="globals/WatchFaceView" pc="268439094" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBottomRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="29" lineNum="366" parent="globals/WatchFaceView" pc="268439117" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBottomRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="29" lineNum="368" parent="globals/WatchFaceView" pc="268439133" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBottomRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="29" lineNum="369" parent="globals/WatchFaceView" pc="268439150" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBottomRow&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="144" parent="globals/WatchFaceView" pc="268439175" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="145" parent="globals/WatchFaceView" pc="268439178" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="146" parent="globals/WatchFaceView" pc="268439190" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="147" parent="globals/WatchFaceView" pc="268439206" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="148" parent="globals/WatchFaceView" pc="268439225" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="149" parent="globals/WatchFaceView" pc="268439228" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="150" parent="globals/WatchFaceView" pc="268439247" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="151" parent="globals/WatchFaceView" pc="268439260" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="151" parent="globals/WatchFaceView" pc="268439271" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="153" parent="globals/WatchFaceView" pc="268439284" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="154" parent="globals/WatchFaceView" pc="268439296" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="156" parent="globals/WatchFaceView" pc="268439323" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="157" parent="globals/WatchFaceView" pc="268439330" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="158" parent="globals/WatchFaceView" pc="268439352" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="159" parent="globals/WatchFaceView" pc="268439369" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="30" lineNum="161" parent="globals/WatchFaceView" pc="268439400" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="31" lineNum="452" parent="globals/WatchFaceView" pc="268439413" symbol="&lt;globals/WatchFaceView/&lt;&gt;_pad&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="31" lineNum="453" parent="globals/WatchFaceView" pc="268439415" symbol="&lt;globals/WatchFaceView/&lt;&gt;_pad&gt;"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="32" lineNum="90" parent="globals/WatchFaceView" pc="268439447" symbol="initialize"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="32" lineNum="91" parent="globals/WatchFaceView" pc="268439449" symbol="initialize"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="32" lineNum="92" parent="globals/WatchFaceView" pc="268439461" symbol="initialize"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="32" lineNum="93" parent="globals/WatchFaceView" pc="268439476" symbol="initialize"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="32" lineNum="94" parent="globals/WatchFaceView" pc="268439507" symbol="initialize"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="32" lineNum="95" parent="globals/WatchFaceView" pc="268439538" symbol="initialize"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="32" lineNum="96" parent="globals/WatchFaceView" pc="268439569" symbol="initialize"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="32" lineNum="97" parent="globals/WatchFaceView" pc="268439600" symbol="initialize"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="32" lineNum="98" parent="globals/WatchFaceView" pc="268439604" symbol="initialize"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="33" lineNum="129" parent="globals/WatchFaceView" pc="268439649" symbol="onUpdate"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="33" lineNum="130" parent="globals/WatchFaceView" pc="268439651" symbol="onUpdate"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="33" lineNum="131" parent="globals/WatchFaceView" pc="268439658" symbol="onUpdate"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="33" lineNum="132" parent="globals/WatchFaceView" pc="268439670" symbol="onUpdate"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="33" lineNum="133" parent="globals/WatchFaceView" pc="268439678" symbol="onUpdate"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="33" lineNum="134" parent="globals/WatchFaceView" pc="268439689" symbol="onUpdate"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="33" lineNum="135" parent="globals/WatchFaceView" pc="268439700" symbol="onUpdate"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="33" lineNum="136" parent="globals/WatchFaceView" pc="268439711" symbol="onUpdate"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="33" lineNum="137" parent="globals/WatchFaceView" pc="268439722" symbol="onUpdate"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="33" lineNum="138" parent="globals/WatchFaceView" pc="268439733" symbol="onUpdate"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="33" lineNum="139" parent="globals/WatchFaceView" pc="268439744" symbol="onUpdate"/>
+        <entry filename="/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceView.mc" id="33" lineNum="140" parent="globals/WatchFaceView" pc="268439755" symbol="onUpdate"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="53" symbol="COMPLICATION_TYPE_NO_FLY_TIME"/>
+        <entry field="true" id="41" symbol="IconStress"/>
+        <entry field="true" id="38" symbol="IconBodyBattery"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="50" symbol="WxRainThunder"/>
+        <entry field="true" id="40" symbol="IconHeartRate"/>
+        <entry field="true" id="10" symbol="&lt;globals/WatchFaceView/&lt;&gt;_calories&gt;"/>
+        <entry id="25" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;"/>
+        <entry id="11" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_compass&gt;"/>
+        <entry field="true" id="49" symbol="WxRain"/>
+        <entry field="true" id="30" symbol="&lt;globals/WatchFaceView/&lt;&gt;_nftId&gt;"/>
+        <entry id="17" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawCrosshair&gt;"/>
+        <entry id="5" object="true" symbol="WatchFaceApp"/>
+        <entry field="true" id="29" symbol="&lt;globals/WatchFaceView/&lt;&gt;_hrId&gt;"/>
+        <entry id="8388924" module="true" symbol="Gregorian"/>
+        <entry field="true" id="46" symbol="WxFog"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="19" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDate&gt;"/>
+        <entry field="true" id="51" symbol="WxSnow"/>
+        <entry field="true" id="45" symbol="WxCloudy"/>
+        <entry field="true" id="52" symbol="AppName"/>
+        <entry field="true" id="43" symbol="WxClearDay"/>
+        <entry id="4" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="36" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_vline&gt;"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry field="true" id="8" symbol="&lt;globals/WatchFaceView/&lt;&gt;_bodyBattery&gt;"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="18" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="12" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_cv&gt;"/>
+        <entry id="28" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_hline&gt;"/>
+        <entry id="8391489" module="true" symbol="Weather"/>
+        <entry field="true" id="48" symbol="WxPartlyCloudyNight"/>
+        <entry id="13" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry field="true" id="27" symbol="&lt;globals/WatchFaceView/&lt;&gt;_heartRate&gt;"/>
+        <entry id="14" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryIcon&gt;"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="44" symbol="WxClearNight"/>
+        <entry id="32" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_pad&gt;"/>
+        <entry id="20" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawGrid&gt;"/>
+        <entry id="15" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawBottomRow&gt;"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="31" symbol="&lt;globals/WatchFaceView/&lt;&gt;_nftMinutes&gt;"/>
+        <entry field="true" id="9" symbol="&lt;globals/WatchFaceView/&lt;&gt;_calId&gt;"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="23" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawMsgBubble&gt;"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="22" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;"/>
+        <entry field="true" id="35" symbol="&lt;globals/WatchFaceView/&lt;&gt;_stress&gt;"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="16" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawCaloriesIcon&gt;"/>
+        <entry field="true" id="42" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="33" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_refreshComplications&gt;"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8391962" module="true" symbol="Complications"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="34" symbol="&lt;globals/WatchFaceView/&lt;&gt;_stId&gt;"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry field="true" id="7" symbol="&lt;globals/WatchFaceView/&lt;&gt;_bbId&gt;"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="24" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;"/>
+        <entry id="6" object="true" symbol="WatchFaceView"/>
+        <entry id="37" method="true" symbol="onComplicationChange"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="47" symbol="WxPartlyCloudyDay"/>
+        <entry field="true" id="39" symbol="IconCalories"/>
+        <entry id="21" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawHeart&gt;"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="26" method="true" symbol="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="8389584" symbol="notificationCount"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435896" name="dc" stackId="1" startPc="268435688"/>
+        <entry arg="true" endPc="268435896" name="cx" stackId="2" startPc="268435688"/>
+        <entry arg="true" endPc="268435896" name="cy" stackId="3" startPc="268435688"/>
+        <entry arg="true" endPc="268435896" name="count" stackId="4" startPc="268435688"/>
+        <entry endPc="268435895" name="w" stackId="5" startPc="268435691"/>
+        <entry endPc="268435895" name="h" stackId="6" startPc="268435691"/>
+        <entry endPc="268435895" name="r" stackId="7" startPc="268435691"/>
+        <entry arg="true" endPc="268436329" name="dc" stackId="1" startPc="268435897"/>
+        <entry endPc="268436328" name="t" stackId="2" startPc="268435900"/>
+        <entry endPc="268436328" name="hStr" stackId="3" startPc="268435900"/>
+        <entry endPc="268436328" name="mStr" stackId="4" startPc="268435900"/>
+        <entry endPc="268436328" name="hW" stackId="5" startPc="268435900"/>
+        <entry endPc="268436328" name="cW" stackId="6" startPc="268435900"/>
+        <entry endPc="268436328" name="mW" stackId="7" startPc="268435900"/>
+        <entry endPc="268436328" name="x" stackId="8" startPc="268435900"/>
+        <entry endPc="268436328" name="secH" stackId="9" startPc="268435900"/>
+        <entry endPc="268436328" name="msgH" stackId="10" startPc="268435900"/>
+        <entry endPc="268436328" name="innerGap" stackId="11" startPc="268435900"/>
+        <entry endPc="268436328" name="totalH" stackId="12" startPc="268435900"/>
+        <entry endPc="268436328" name="groupTop" stackId="13" startPc="268435900"/>
+        <entry endPc="268436328" name="cfg" stackId="14" startPc="268435900"/>
+        <entry endPc="268436328" name="notif" stackId="15" startPc="268435900"/>
+        <entry endPc="268436328" name="msgCY" stackId="16" startPc="268435900"/>
+        <entry endPc="268436328" name="secCY" stackId="17" startPc="268435900"/>
+        <entry arg="true" endPc="268436397" name="dc" stackId="1" startPc="268436330"/>
+        <entry arg="true" endPc="268436397" name="cx" stackId="2" startPc="268436330"/>
+        <entry arg="true" endPc="268436397" name="cy" stackId="3" startPc="268436330"/>
+        <entry endPc="268436396" name="bmp" stackId="4" startPc="268436333"/>
+        <entry arg="true" endPc="268436418" name="id" stackId="1" startPc="268436398"/>
+        <entry arg="true" endPc="268436466" name="id" stackId="1" startPc="268436419"/>
+        <entry endPc="268436466" name="c" stackId="2" startPc="268436422"/>
+        <entry arg="true" endPc="268436952" name="dc" stackId="1" startPc="268436467"/>
+        <entry endPc="268436951" name="condition" stackId="2" startPc="268436470"/>
+        <entry endPc="268436951" name="tempStr" stackId="3" startPc="268436470"/>
+        <entry endPc="268436951" name="windStr" stackId="4" startPc="268436470"/>
+        <entry endPc="268436951" name="altStr" stackId="5" startPc="268436470"/>
+        <entry endPc="268436706" name="w" stackId="6" startPc="268436510"/>
+        <entry endPc="268436617" name="f" stackId="7" startPc="268436564"/>
+        <entry endPc="268436700" name="kts" stackId="8" startPc="268436643"/>
+        <entry endPc="268436951" name="act" stackId="9" startPc="268436470"/>
+        <entry endPc="268436951" name="isNight" stackId="10" startPc="268436470"/>
+        <entry endPc="268436951" name="hr" stackId="11" startPc="268436470"/>
+        <entry arg="true" endPc="268436987" name="dc" stackId="1" startPc="268436953"/>
+        <entry arg="true" endPc="268436987" name="y" stackId="2" startPc="268436953"/>
+        <entry arg="true" endPc="268436987" name="w" stackId="3" startPc="268436953"/>
+        <entry arg="true" endPc="268437177" name="dc" stackId="1" startPc="268436988"/>
+        <entry arg="true" endPc="268437177" name="cx" stackId="2" startPc="268436988"/>
+        <entry arg="true" endPc="268437177" name="cy" stackId="3" startPc="268436988"/>
+        <entry arg="true" endPc="268437245" name="dc" stackId="1" startPc="268437178"/>
+        <entry arg="true" endPc="268437245" name="cx" stackId="2" startPc="268437178"/>
+        <entry arg="true" endPc="268437245" name="cy" stackId="3" startPc="268437178"/>
+        <entry endPc="268437244" name="bmp" stackId="4" startPc="268437181"/>
+        <entry endPc="268437370" name="ids" stackId="1" startPc="268437249"/>
+        <entry endPc="268437370" name="i" stackId="2" startPc="268437331"/>
+        <entry arg="true" endPc="268437677" name="dc" stackId="1" startPc="268437372"/>
+        <entry endPc="268437676" name="batt" stackId="2" startPc="268437375"/>
+        <entry endPc="268437676" name="col" stackId="3" startPc="268437375"/>
+        <entry endPc="268437676" name="segW" stackId="4" startPc="268437375"/>
+        <entry endPc="268437676" name="gap" stackId="5" startPc="268437375"/>
+        <entry endPc="268437676" name="barY" stackId="6" startPc="268437375"/>
+        <entry endPc="268437676" name="totalW" stackId="7" startPc="268437375"/>
+        <entry endPc="268437676" name="startX" stackId="8" startPc="268437375"/>
+        <entry endPc="268437676" name="lineY" stackId="9" startPc="268437375"/>
+        <entry endPc="268437676" name="i" stackId="10" startPc="268437528"/>
+        <entry endPc="268437666" name="segX" stackId="11" startPc="268437528"/>
+        <entry endPc="268437666" name="segMin" stackId="12" startPc="268437528"/>
+        <entry endPc="268437666" name="segMax" stackId="13" startPc="268437528"/>
+        <entry endPc="268437663" name="fillW" stackId="14" startPc="268437609"/>
+        <entry arg="true" endPc="268437834" name="dc" stackId="1" startPc="268437678"/>
+        <entry arg="true" endPc="268437902" name="dc" stackId="1" startPc="268437835"/>
+        <entry arg="true" endPc="268437902" name="cx" stackId="2" startPc="268437835"/>
+        <entry arg="true" endPc="268437902" name="cy" stackId="3" startPc="268437835"/>
+        <entry endPc="268437901" name="bmp" stackId="4" startPc="268437838"/>
+        <entry endPc="268438075" name="ids" stackId="1" startPc="268437906"/>
+        <entry endPc="268438045" name="i" stackId="2" startPc="268438006"/>
+        <entry arg="true" endPc="268438339" name="dc" stackId="1" startPc="268438077"/>
+        <entry endPc="268438338" name="bbStr" stackId="2" startPc="268438080"/>
+        <entry endPc="268438338" name="stStr" stackId="3" startPc="268438080"/>
+        <entry endPc="268438338" name="calStr" stackId="4" startPc="268438080"/>
+        <entry arg="true" endPc="268438446" name="dc" stackId="1" startPc="268438340"/>
+        <entry endPc="268438445" name="now" stackId="2" startPc="268438343"/>
+        <entry endPc="268438445" name="days" stackId="3" startPc="268438343"/>
+        <entry endPc="268438445" name="str" stackId="4" startPc="268438343"/>
+        <entry arg="true" endPc="268438488" name="deg" stackId="1" startPc="268438447"/>
+        <entry endPc="268438488" name="d" stackId="2" startPc="268438450"/>
+        <entry arg="true" endPc="268438512" name="dc" stackId="1" startPc="268438492"/>
+        <entry arg="true" endPc="268438512" name="x" stackId="2" startPc="268438492"/>
+        <entry arg="true" endPc="268438512" name="y1" stackId="3" startPc="268438492"/>
+        <entry arg="true" endPc="268438512" name="y2" stackId="4" startPc="268438492"/>
+        <entry arg="true" endPc="268439016" name="dc" stackId="1" startPc="268438513"/>
+        <entry arg="true" endPc="268439016" name="cx" stackId="2" startPc="268438513"/>
+        <entry arg="true" endPc="268439016" name="cy" stackId="3" startPc="268438513"/>
+        <entry arg="true" endPc="268439016" name="condition" stackId="4" startPc="268438513"/>
+        <entry arg="true" endPc="268439016" name="isNight" stackId="5" startPc="268438513"/>
+        <entry endPc="268439015" name="rezId" stackId="6" startPc="268438516"/>
+        <entry endPc="268439015" name="bmp" stackId="7" startPc="268438516"/>
+        <entry arg="true" endPc="268439174" name="dc" stackId="1" startPc="268439017"/>
+        <entry endPc="268439173" name="hrStr" stackId="2" startPc="268439020"/>
+        <entry endPc="268439173" name="icx" stackId="3" startPc="268439020"/>
+        <entry endPc="268439173" name="bmp" stackId="4" startPc="268439020"/>
+        <entry arg="true" endPc="268439412" name="dc" stackId="1" startPc="268439175"/>
+        <entry endPc="268439411" name="hours" stackId="2" startPc="268439178"/>
+        <entry endPc="268439322" name="t" stackId="3" startPc="268439284"/>
+        <entry endPc="268439396" name="sweep" stackId="4" startPc="268439330"/>
+        <entry arg="true" endPc="268439446" name="n" stackId="1" startPc="268439413"/>
+        <entry arg="true" endPc="268439766" name="dc" stackId="1" startPc="268439649"/>
+    </localVars>
+    <deviceInfo deviceVersion="45fe3cbb0de8ea0a70e12628d2697915f1272301" partNumber="006-B4223-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="WxRain"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="WxCloudy"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="IconHeartRate"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="IconStress"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="IconBodyBattery"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="IconCalories"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="WxSnow"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="WxPartlyCloudyDay"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="WxClearDay"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="WxPartlyCloudyNight"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="WxFog"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="WxClearNight"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="WxRainThunder"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="49" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Rez" offset="107" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/WatchFaceApp" offset="151" parentId="globals" symbolId="WatchFaceApp" type="class"/>
+        <dataEntry label="globals/WatchFaceView" offset="222" parentId="globals" symbolId="WatchFaceView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="581" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="733" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435479" name="&lt;init&gt;" parent="Rez" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435491" name="&lt;init&gt;" parent="WatchFaceApp" startPc="268435480">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435503" name="&lt;init&gt;" parent="WatchFaceView" startPc="268435492">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435506" name="onStart" parent="WatchFaceApp" startPc="268435504">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435534" name="getInitialView" parent="WatchFaceApp" startPc="268435507">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435549" name="initialize" parent="WatchFaceApp" startPc="268435535">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435552" name="onStop" parent="WatchFaceApp" startPc="268435550">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268435687" name="&lt;globals/WatchFaceView/&lt;&gt;_refreshComplications&gt;" parent="WatchFaceView" startPc="268435553">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268435896" name="&lt;globals/WatchFaceView/&lt;&gt;_drawMsgBubble&gt;" parent="WatchFaceView" startPc="268435688">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <param id="count"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436329" name="&lt;globals/WatchFaceView/&lt;&gt;_drawTime&gt;" parent="WatchFaceView" startPc="268435897">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436397" name="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryIcon&gt;" parent="WatchFaceView" startPc="268436330">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436418" name="onComplicationChange" parent="WatchFaceView" startPc="268436398">
+            <param id="id"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436466" name="&lt;globals/WatchFaceView/&lt;&gt;_cv&gt;" parent="WatchFaceView" startPc="268436419">
+            <param id="id"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436952" name="&lt;globals/WatchFaceView/&lt;&gt;_drawInfoRow&gt;" parent="WatchFaceView" startPc="268436467">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436987" name="&lt;globals/WatchFaceView/&lt;&gt;_hline&gt;" parent="WatchFaceView" startPc="268436953">
+            <param id="dc"/>
+            <param id="y"/>
+            <param id="w"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437177" name="&lt;globals/WatchFaceView/&lt;&gt;_drawHeart&gt;" parent="WatchFaceView" startPc="268436988">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437245" name="&lt;globals/WatchFaceView/&lt;&gt;_drawCrosshair&gt;" parent="WatchFaceView" startPc="268437178">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437371" name="onHide" parent="WatchFaceView" startPc="268437246">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437677" name="&lt;globals/WatchFaceView/&lt;&gt;_drawBatteryBar&gt;" parent="WatchFaceView" startPc="268437372">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437834" name="&lt;globals/WatchFaceView/&lt;&gt;_drawGrid&gt;" parent="WatchFaceView" startPc="268437678">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437902" name="&lt;globals/WatchFaceView/&lt;&gt;_drawCaloriesIcon&gt;" parent="WatchFaceView" startPc="268437835">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438076" name="onShow" parent="WatchFaceView" startPc="268437903">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268438339" name="&lt;globals/WatchFaceView/&lt;&gt;_drawDataRow&gt;" parent="WatchFaceView" startPc="268438077">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268438446" name="&lt;globals/WatchFaceView/&lt;&gt;_drawDate&gt;" parent="WatchFaceView" startPc="268438340">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268438488" name="&lt;globals/WatchFaceView/&lt;&gt;_compass&gt;" parent="WatchFaceView" startPc="268438447">
+            <param id="deg"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438491" name="onLayout" parent="WatchFaceView" startPc="268438489">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268438512" name="&lt;globals/WatchFaceView/&lt;&gt;_vline&gt;" parent="WatchFaceView" startPc="268438492">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y1"/>
+            <param id="y2"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268439016" name="&lt;globals/WatchFaceView/&lt;&gt;_drawWeatherIcon&gt;" parent="WatchFaceView" startPc="268438513">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <param id="condition"/>
+            <param id="isNight"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268439174" name="&lt;globals/WatchFaceView/&lt;&gt;_drawBottomRow&gt;" parent="WatchFaceView" startPc="268439017">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268439412" name="&lt;globals/WatchFaceView/&lt;&gt;_drawNftArc&gt;" parent="WatchFaceView" startPc="268439175">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268439446" name="&lt;globals/WatchFaceView/&lt;&gt;_pad&gt;" parent="WatchFaceView" startPc="268439413">
+            <param id="n"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439648" name="initialize" parent="WatchFaceView" startPc="268439447">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439766" name="onUpdate" parent="WatchFaceView" startPc="268439649">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

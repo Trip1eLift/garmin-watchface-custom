@@ -1,0 +1,49 @@
+[ @file = "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+import Toybox.Application;
+[ @file = "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc"; @line = 5; @symbol_classdef = [WatchFaceApp,5,6,18]; @symbol_extends<0> = [Application,5,27,38]; @symbol_extends<1> = [AppBase,5,39,46]; ]
+class WatchFaceApp extends Application.AppBase {
+    [ @file = "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; ]
+    function initialize() as Void {
+_Users_josephchang_Documents_code_garmin_watchface_custom_source_WatchFaceApp_mc_7_26_9_4_start:
+[ "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc" 8 8 ]
+        symbol [ AppBase %tmp.2 8 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 8 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_josephchang_Documents_code_garmin_watchface_custom_source_WatchFaceApp_mc_7_26_9_4_stop:
+    }
+    [ @file = "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc"; @line = 11; @symbol_functiondef = [onStart,11,13,20]; @symbol_param<0> = [state,11,21,26]; @symbol_param<0>_type<0> = [Dictionary,11,30,40]; ]
+    function onStart(state as Dictionary or Null) as Void {
+    }
+    [ @file = "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc"; @line = 14; @symbol_functiondef = [onStop,14,13,19]; @symbol_param<0> = [state,14,20,25]; @symbol_param<0>_type<0> = [Dictionary,14,29,39]; ]
+    function onStop(state as Dictionary or Null) as Void {
+    }
+    [ @file = "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc"; @line = 17; @symbol_functiondef = [getInitialView,17,13,27]; @symbol_return<0> = [WatchUi,17,34,41]; @symbol_return<1> = [Views,17,42,47]; @symbol_return<2> = [WatchUi,17,53,60]; @symbol_return<3> = [Views,17,61,66]; @symbol_return<4> = [WatchUi,17,68,75]; @symbol_return<5> = [InputDelegates,17,76,90]; ]
+    function getInitialView() as [WatchUi.Views] or [WatchUi.Views, WatchUi.InputDelegates] {
+_Users_josephchang_Documents_code_garmin_watchface_custom_source_WatchFaceApp_mc_17_92_19_4_start:
+[ "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc" 18 8 ]
+        %tmp.1 = newa 1;
+        symbol [ WatchFaceView %tmp.5 18 20 33 ];
+        %tmp.5 = getv ? :WatchFaceView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        ret %tmp.7;
+_Users_josephchang_Documents_code_garmin_watchface_custom_source_WatchFaceApp_mc_17_92_19_4_stop:
+    }
+}
+[ @file = "/Users/josephchang/Documents/code/garmin-watchface-custom/source/WatchFaceApp.mc"; @line = 1; ]
+<init> {
+}

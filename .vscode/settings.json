@@ -1,0 +1,10 @@
+{
+    "monkeyC.sdkPath": "/Users/josephchang/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-9.1.0-2026-03-09-6a872a80b",
+
+    "files.associations": {
+        "*.mc": "monkeyc",
+        "*.jungle": "jungle"
+    },
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false
+}

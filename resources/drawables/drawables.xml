@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.png"/>
+    <!-- Weather icons from github.com/mikeller/garmin-divesite-weather-widget -->
+    <bitmap id="WxClearDay"           filename="weather_icons/clearsky_day.png"/>
+    <bitmap id="WxClearNight"         filename="weather_icons/clearsky_night.png"/>
+    <bitmap id="WxPartlyCloudyDay"    filename="weather_icons/partlycloudy_day.png"/>
+    <bitmap id="WxPartlyCloudyNight"  filename="weather_icons/partlycloudy_night.png"/>
+    <bitmap id="WxCloudy"             filename="weather_icons/cloudy.png"/>
+    <bitmap id="WxRain"               filename="weather_icons/rain.png"/>
+    <bitmap id="WxRainThunder"        filename="weather_icons/rainandthunder.png"/>
+    <bitmap id="WxSnow"               filename="weather_icons/snow.png"/>
+    <bitmap id="WxFog"                filename="weather_icons/fog.png"/>
+    <!-- Data icons -->
+    <bitmap id="IconBodyBattery"      filename="bodybattery_icon.png"/>
+    <bitmap id="IconCalories"         filename="calories_icon.png"/>
+    <bitmap id="IconStress"           filename="stress_icon.png"/>
+    <bitmap id="IconHeartRate"        filename="heartrate_icon.png"/>
+</drawables>
