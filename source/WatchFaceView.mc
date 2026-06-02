@@ -10,20 +10,22 @@ import Toybox.WatchUi;
 import Toybox.Weather;
 
 // ─── Layout (454×454 Descent Mk3i 51mm) ──────────────────────────────────────
+//  Fully symmetric around center y=227. Top mirrors bottom exactly.
 //
-//  y=52   [          SUN 31          ]  ← date, FONT_MEDIUM, orange
-//  y=78   ──────────────────────────
-//         [ ☀ 53° ] | [  S 6  ] | [-59ft]   ← info row, y=99
-//  y=120  ══════════════ BATTERY ══════════  ← y=120→148
-//  y=148  ──────────────────────────
+//  y=48   [          MON 1          ]  ← date, FONT_MEDIUM, orange
+//  y=74   ─────────────── (w=282) ──────────────
+//         [ ☀ 53° ] | [  S 6  ] | [-59ft]   ← info row, y=95
+//  ├── vlines x=161,293: y=82→132 ──────────────────────────┤
+//  y=140  ▓▓▓▓▓ BATTERY (on 5-seg line) ▓▓▓▓▓ ← barY=137, BATT_H=6
 //
-//          [   21  :  00   ] [  0  ]  ← msg bubble top-aligned to digits
-//  y=218                     [ :06 ]  ← seconds bottom-aligned to digits
+//          [   21  :  00   ] [  0  ]  ← time center y=227
+//                             [ :06 ]
 //
-//  y=290  ──────────────────────────
-//         [ 👤 75% ] | [ ⊕ 36 ] | [ 🔥 0 ]  ← data row, y=333
-//  y=368  ──────────────────────────
-//                   [ ♥  39   ]             ← HR bottom center, y=392
+//  y=314  ▒▒▒▒▒ 5-seg line (mirrors battery) ▒▒▒▒▒
+//  ├── vlines x=161,293: y=322→372 ─────────────────────────┤
+//         [ 🔋 52% ] | [ ⚡ 31 ] | [ 🔥 0 ]  ← data row, y=359
+//  y=380  ─────────────── (w=282) ──────────────
+//                   [ ♥  166  ]             ← HR bottom center, y=406
 //
 //  NFT arc drawn last — always on top of everything
 //
@@ -31,16 +33,15 @@ import Toybox.Weather;
 const SCR_CX = 227;
 const SCR_CY = 227;
 
-const DATE_Y  = 52;
-const LINE1_Y = 78;
-const INFO_Y  = 99;
-const LINE2_Y = 120;
-const LINE3_Y = 140;    // battery separator (5-segment line here), top of time
-const TIME_Y  = 226;    // center of time block [140,312]
-const LINE4_Y = 312;    // bottom of time section
-const DATA_Y  = 340;
-const LINE5_Y = 368;
-const BOT_Y   = 392;
+const DATE_Y  = 48;     // symmetric with BOT_Y=406  (48+406=454)
+const LINE1_Y = 74;     // symmetric with LINE5_Y=380 (74+380=454)
+const INFO_Y  = 107;    // centered in cell [74,140]: (74+140)/2=107; symmetric with DATA_Y=347
+const LINE3_Y = 140;    // battery bar ON this 5-segment line, top of time (140+314=454)
+const TIME_Y  = 227;    // true screen center
+const LINE4_Y = 314;    // 5-segment line, bottom of time (mirrors LINE3_Y)
+const DATA_Y  = 347;    // centered in cell [314,380]: (314+380)/2=347; symmetric with INFO_Y=107
+const LINE5_Y = 380;    // symmetric with LINE1_Y
+const BOT_Y   = 406;    // symmetric with DATE_Y
 
 const BATT_H  = 6;
 const TIME_CX = 227;    // true screen center — digits fill the widest zone
@@ -68,8 +69,8 @@ const C_BATT_HI  = 0xFF8C00;
 const C_BATT_MID = 0xFFDD00;
 const C_BATT_LOW = 0xFF2200;
 
-const C_NFT_ARC = 0xFF6600;
-const C_NFT_TRK = 0x2A1500;
+const C_NFT_ARC = 0xFF0000;
+const C_NFT_TRK = 0x2A0000;
 const NFT_R     = 224;   // arc sits at screen edge (pen ±2 → outer rim at 226)
 const NFT_PEN   = 4;
 
@@ -172,21 +173,30 @@ class WatchFaceView extends WatchUi.WatchFace {
     }
 
     // ─── Grid ─────────────────────────────────────────────────────────────────
-    // Horizontal widths: 16px inset from NFT arc (r_eff=208)
-    // Vertical lines: same 16px inset from their bounding horizontals
+    // Horizontal widths: 16px inset from arc (r_eff=208). Vertical: 8px inset.
+    // Top mirrors bottom exactly around center y=227.
     private function _drawGrid(dc as Graphics.Dc) as Void {
         dc.setColor(C_DIM, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(1);
-        _hline(dc, LINE1_Y, 290);   // dist=149, chord(r=208)≈290
-        // LINE2_Y, LINE3_Y removed — battery floats free, avoids double-line near bar
-        _hline(dc, LINE4_Y, 378);   // dist=85,  chord(r=208)≈380
-        _hline(dc, LINE5_Y, 306);   // dist=141, chord(r=208)≈306
-        // Info row vertical dividers — inset 16px from bounding horizontals
-        _vline(dc, 160, LINE1_Y + 16, LINE2_Y - 16);
-        _vline(dc, 294, LINE1_Y + 16, LINE2_Y - 16);
-        // Data row vertical dividers — inset 16px from bounding horizontals
-        _vline(dc, 161, LINE4_Y + 16, LINE5_Y - 16);
-        _vline(dc, 293, LINE4_Y + 16, LINE5_Y - 16);
+        // Outer dividers (top/bottom) — dist=153, r_eff=208, half≈141, w=282
+        _hline(dc, LINE1_Y, 282);
+        _hline(dc, LINE5_Y, 282);
+        // 5-segment separators — battery bar sits on LINE3_Y; LINE4_Y mirrors it
+        var segW   = 73;
+        var gap    = 3;
+        var startX = SCR_CX - (5 * segW + 4 * gap) / 2;
+        for (var i = 0; i < 5; i++) {
+            var sx = startX + i * (segW + gap);
+            dc.drawLine(sx, LINE3_Y, sx + segW, LINE3_Y);
+            dc.drawLine(sx, LINE4_Y, sx + segW, LINE4_Y);
+        }
+        // Info row dividers: shifted inward to x=175/279 (±52 from center) to give
+        // outer cells room for wider FONT_SMALL text
+        _vline(dc, 175, LINE1_Y + 8, LINE3_Y - 8);
+        _vline(dc, 279, LINE1_Y + 8, LINE3_Y - 8);
+        // Data row dividers: same x as info row
+        _vline(dc, 175, LINE4_Y + 8, LINE5_Y - 8);
+        _vline(dc, 279, LINE4_Y + 8, LINE5_Y - 8);
     }
 
     // ─── Info row ─────────────────────────────────────────────────────────────
@@ -219,38 +229,35 @@ class WatchFaceView extends WatchUi.WatchFace {
         var hr = System.getClockTime().hour;
         if (hr < 6 || hr >= 20) { isNight = true; }
 
-        _drawWeatherIcon(dc, INFO_CELL1_CX - 20, INFO_Y, condition, isNight);
+        // Cell 1: 40px icon center at D1-24, text at D1+4
+        _drawWeatherIcon(dc, INFO_CELL1_CX - 24, INFO_Y, condition, isNight);
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(INFO_CELL1_CX + 8, INFO_Y, Graphics.FONT_XTINY, tempStr,
+        dc.drawText(INFO_CELL1_CX + 4, INFO_Y, Graphics.FONT_SMALL, tempStr,
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
+        // Cell 2: text centered at D2
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(INFO_CELL2_CX, INFO_Y, Graphics.FONT_XTINY, windStr,
+        dc.drawText(INFO_CELL2_CX, INFO_Y, Graphics.FONT_SMALL, windStr,
                     Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
+        // Cell 3: text centered at D3
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(INFO_CELL3_CX, INFO_Y, Graphics.FONT_XTINY, altStr,
+        dc.drawText(INFO_CELL3_CX, INFO_Y, Graphics.FONT_SMALL, altStr,
                     Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
-    // ─── Battery bar — 5 segments over a dim grid line ───────────────────────
-    // Grid line is always visible; filled segments paint on top of it.
-    // Empty segments leave the line exposed so the empty portion is clear.
+    // ─── Battery bar — 5 segments centered on LINE3_Y ────────────────────────
+    // barY centers the 6px bar on LINE3_Y so it sits directly on the grid line.
+    // Only filled segments are drawn; empty ones let the dim grid line show through.
     private function _drawBatteryBar(dc as Graphics.Dc) as Void {
         var batt   = System.getSystemStats().battery.toNumber();
         var col    = batt > 30 ? C_BATT_HI : (batt > 15 ? C_BATT_MID : C_BATT_LOW);
         var segW   = 73;
         var gap    = 3;
-        var barY   = LINE2_Y + (LINE3_Y - LINE2_Y - BATT_H) / 2;
-        var totalW = 5 * segW + 4 * gap;   // 377px
+        var barY   = LINE3_Y - BATT_H / 2;   // center bar on LINE3_Y grid line
+        var totalW = 5 * segW + 4 * gap;      // 377px
         var startX = SCR_CX - totalW / 2;
-        var lineY  = barY + BATT_H / 2;    // vertical center of the bar
 
-        // Dim grid line spanning full battery width (shows through empty segments)
-        dc.setColor(C_DIM, Graphics.COLOR_TRANSPARENT);
-        dc.drawLine(startX, lineY, startX + totalW, lineY);
-
-        // Filled segments drawn on top — empty segments left bare so line shows
         for (var i = 0; i < 5; i++) {
             var segX   = startX + i * (segW + gap);
             var segMin = i * 20;
@@ -268,50 +275,51 @@ class WatchFaceView extends WatchUi.WatchFace {
         }
     }
 
-    // ─── Time: white HH, white ":", orange MM + right block (msg top/sec bot) ─
+    // ─── Time: 12h FONT_NUMBER_HOT, left-aligned; compact right column ───────────
     private function _drawTime(dc as Graphics.Dc) as Void {
         var t    = System.getClockTime();
-        var hStr = _pad(t.hour);
+        var h12  = t.hour % 12;
+        if (h12 == 0) { h12 = 12; }
+        var hStr = h12.toString();    // no leading zero in 12h
         var mStr = _pad(t.min);
+        var ampm = t.hour < 12 ? "AM" : "PM";
 
-        // Center HH:MM within the left 2/3 of screen (up to SEC_X)
+        // Left-align HH:MM starting at left arc margin
+        var x  = 22;
         var hW = dc.getTextWidthInPixels(hStr, Graphics.FONT_NUMBER_HOT);
         var cW = dc.getTextWidthInPixels(":",  Graphics.FONT_NUMBER_HOT);
-        var mW = dc.getTextWidthInPixels(mStr, Graphics.FONT_NUMBER_HOT);
-        var x  = TIME_CX - (hW + cW + mW) / 2;
 
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x, TIME_Y, Graphics.FONT_NUMBER_HOT, hStr,
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
         x += hW;
-
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x, TIME_Y, Graphics.FONT_NUMBER_HOT, ":",
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
         x += cW;
-
         dc.setColor(C_ORANGE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x, TIME_Y, Graphics.FONT_NUMBER_HOT, mStr,
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        // Right block: message bubble on TOP, seconds on BOTTOM, compact grouping
-        var secH     = dc.getFontHeight(Graphics.FONT_LARGE);
-        var msgH     = dc.getFontHeight(Graphics.FONT_SMALL);
-        var innerGap = 4;
-        var totalH   = msgH + innerGap + secH;
-        var groupTop = TIME_Y - totalH / 2;
+        // Right column: msg bubble / AM/PM / seconds — compact group centered at TIME_Y
+        var msgH  = 18;  // bubble height (see _drawMsgBubble)
+        var ampmH = dc.getFontHeight(Graphics.FONT_SMALL);
+        var secH  = dc.getFontHeight(Graphics.FONT_SMALL);
+        var gap   = 4;
+        var totalH = msgH + gap + ampmH + gap + secH;
+        var top    = TIME_Y - totalH / 2;
 
-        // Message bubble at top of group
         var cfg   = System.getDeviceSettings();
         var notif = 0;
         if (cfg has :notificationCount) { notif = cfg.notificationCount; }
-        var msgCY = groupTop + msgH / 2;
-        _drawMsgBubble(dc, SEC_X, msgCY, notif);
+        _drawMsgBubble(dc, SEC_X, top + msgH / 2, notif);
 
-        // Seconds at bottom of group
-        var secCY = groupTop + msgH + innerGap + secH / 2;
+        dc.setColor(C_DIM, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(SEC_X, top + msgH + gap + ampmH / 2, Graphics.FONT_SMALL, ampm,
+                    Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+
         dc.setColor(C_YELLOW, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(SEC_X, secCY, Graphics.FONT_LARGE,
+        dc.drawText(SEC_X, top + msgH + gap + ampmH + gap + secH / 2, Graphics.FONT_SMALL,
                     ":" + _pad(t.sec),
                     Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
@@ -319,9 +327,9 @@ class WatchFaceView extends WatchUi.WatchFace {
     // Speech bubble with notification count
     private function _drawMsgBubble(dc as Graphics.Dc, cx as Number, cy as Number,
                                      count as Number) as Void {
-        var w = 38;
-        var h = 24;
-        var r = 6;
+        var w = 30;
+        var h = 18;
+        var r = 5;
         dc.setColor(C_ORANGE, Graphics.COLOR_TRANSPARENT);
         dc.fillRoundedRectangle(cx - w/2, cy - h/2, w, h, r);
         dc.fillPolygon([[cx - w/2,     cy + h/2],
@@ -338,35 +346,35 @@ class WatchFaceView extends WatchUi.WatchFace {
         var bbStr  = _bodyBattery != null ? _bodyBattery.toString() + "%" : "--%";
         _drawBatteryIcon(dc, D1 - 24, DATA_Y);
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(D1 + 4, DATA_Y, Graphics.FONT_XTINY, bbStr,
+        dc.drawText(D1 + 4, DATA_Y, Graphics.FONT_SMALL, bbStr,
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
         var stStr  = _stress != null ? _stress.toString() : "--";
-        _drawCrosshair(dc, D2 - 18, DATA_Y);
+        _drawCrosshair(dc, D2 - 24, DATA_Y);
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(D2 + 4, DATA_Y, Graphics.FONT_XTINY, stStr,
+        dc.drawText(D2 + 4, DATA_Y, Graphics.FONT_SMALL, stStr,
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
         var calStr = _calories != null ? _calories.toString() : "--";
-        _drawCaloriesIcon(dc, D3 - 18, DATA_Y);
+        _drawCaloriesIcon(dc, D3 - 24, DATA_Y);
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(D3 + 4, DATA_Y, Graphics.FONT_XTINY, calStr,
+        dc.drawText(D3 + 4, DATA_Y, Graphics.FONT_SMALL, calStr,
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
-    // ─── Bottom row: HR centered — 40×40 icon + FONT_MEDIUM digit ────────────
+    // ─── Bottom row: mirrors date row — icon + orange FONT_MEDIUM, centered ───
     private function _drawBottomRow(dc as Graphics.Dc) as Void {
         var hrStr = _heartRate != null ? _heartRate.toString() : "--";
-        // Icon 40×40 centered at icx=200, text left-aligned at 200+24=224
-        var icx = 200;
+        // Center icon+value group at SCR_CX (mirrors date centering)
+        var icx = SCR_CX - 38;
         var bmp = Application.loadResource(Rez.Drawables.IconHeartRate) as WatchUi.BitmapResource;
         if (bmp != null) {
-            dc.drawBitmap(icx - 20, BOT_Y - 20, bmp);
+            dc.drawBitmap(icx - 20, BOT_Y - 20, bmp);  // 40px icon centered at (icx, BOT_Y)
         } else {
             _drawHeart(dc, icx, BOT_Y);
         }
-        dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(icx + 24, BOT_Y, Graphics.FONT_MEDIUM, hrStr,
+        dc.setColor(C_ORANGE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(icx + 26, BOT_Y, Graphics.FONT_MEDIUM, hrStr,
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
@@ -395,33 +403,33 @@ class WatchFaceView extends WatchUi.WatchFace {
         }
         var bmp = Application.loadResource(rezId) as WatchUi.BitmapResource;
         if (bmp != null) {
-            dc.drawBitmap(cx - 14, cy - 14, bmp);
+            dc.drawBitmap(cx - 20, cy - 20, bmp);
         }
     }
 
     // ─── Data icons ───────────────────────────────────────────────────────────
 
-    // Body battery icon (icons8 PNG bitmap)
+    // Body battery icon (40px icons8 PNG bitmap)
     private function _drawBatteryIcon(dc as Graphics.Dc, cx as Number, cy as Number) as Void {
         var bmp = Application.loadResource(Rez.Drawables.IconBodyBattery) as WatchUi.BitmapResource;
         if (bmp != null) {
-            dc.drawBitmap(cx - 14, cy - 14, bmp);
+            dc.drawBitmap(cx - 20, cy - 20, bmp);
         }
     }
 
-    // Stress icon (icons8 PNG bitmap)
+    // Stress icon (40px icons8 PNG bitmap)
     private function _drawCrosshair(dc as Graphics.Dc, cx as Number, cy as Number) as Void {
         var bmp = Application.loadResource(Rez.Drawables.IconStress) as WatchUi.BitmapResource;
         if (bmp != null) {
-            dc.drawBitmap(cx - 14, cy - 14, bmp);
+            dc.drawBitmap(cx - 20, cy - 20, bmp);
         }
     }
 
-    // Calories icon (icons8 PNG bitmap)
+    // Calories icon (40px icons8 PNG bitmap)
     private function _drawCaloriesIcon(dc as Graphics.Dc, cx as Number, cy as Number) as Void {
         var bmp = Application.loadResource(Rez.Drawables.IconCalories) as WatchUi.BitmapResource;
         if (bmp != null) {
-            dc.drawBitmap(cx - 14, cy - 14, bmp);
+            dc.drawBitmap(cx - 20, cy - 20, bmp);
         }
     }
 

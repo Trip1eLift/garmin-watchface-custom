@@ -1,0 +1,27 @@
+# Garmin Connect IQ signing keys (local only, never commit)
+developer_key.pem
+developer_key.der
+*.pem
+*.der
+*.p12
+
+# SSH keys (should never be here, belt-and-suspenders)
+id_*
+*.pub
+
+# Build artifacts
+*.prg
+*.prg.debug.xml
+gen/
+bin/
+*.iq
+
+# Mirror files (generated during build)
+external-mir/
+internal-mir/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/settings.json
