@@ -70,7 +70,7 @@ const C_BATT_HI  = 0xFF8C00;
 const C_BATT_MID = 0xFFDD00;
 const C_BATT_LOW = 0xFF2200;
 
-const C_NFT_ARC = 0xFF0000;
+const C_NFT_ARC = 0xEB3324;
 const C_NFT_TRK = 0x2A0000;
 const NFT_R     = 224;   // arc sits at screen edge (pen ±2 → outer rim at 226)
 const NFT_PEN   = 4;
@@ -200,6 +200,19 @@ class WatchFaceView extends WatchUi.WatchFace {
         var leftY  = (SCR_CY - baseR * sa + hw * ca).toNumber();
         var rightX = (SCR_CX + baseR * ca - hw * sa).toNumber();
         var rightY = (SCR_CY - baseR * sa - hw * ca).toNumber();
+
+        // Black outline: 3px larger on all sides
+        var oTip  = tipR  + 3;
+        var oBase = baseR - 3;
+        var oHw   = hw + 6;
+        var otX  = (SCR_CX + oTip  * ca).toNumber();
+        var otY  = (SCR_CY - oTip  * sa).toNumber();
+        var olX  = (SCR_CX + oBase * ca + oHw * sa).toNumber();
+        var olY  = (SCR_CY - oBase * sa + oHw * ca).toNumber();
+        var orX  = (SCR_CX + oBase * ca - oHw * sa).toNumber();
+        var orY  = (SCR_CY - oBase * sa - oHw * ca).toNumber();
+        dc.setColor(C_BG, Graphics.COLOR_TRANSPARENT);
+        dc.fillPolygon([[otX, otY], [olX, olY], [orX, orY]]);
 
         dc.setColor(0x4CA2B9, Graphics.COLOR_TRANSPARENT);
         dc.fillPolygon([[tipX, tipY], [leftX, leftY], [rightX, rightY]]);
