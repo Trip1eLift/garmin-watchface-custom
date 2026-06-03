@@ -201,10 +201,10 @@ class WatchFaceView extends WatchUi.WatchFace {
         var rightX = (SCR_CX + baseR * ca - hw * sa).toNumber();
         var rightY = (SCR_CY - baseR * sa - hw * ca).toNumber();
 
-        // Black outline: 3px larger on all sides
-        var oTip  = tipR  + 3;
-        var oBase = baseR - 3;
-        var oHw   = hw + 6;
+        // Black outline: 5px larger on all sides
+        var oTip  = tipR  + 5;
+        var oBase = baseR - 5;
+        var oHw   = hw + 10;
         var otX  = (SCR_CX + oTip  * ca).toNumber();
         var otY  = (SCR_CY - oTip  * sa).toNumber();
         var olX  = (SCR_CX + oBase * ca + oHw * sa).toNumber();
@@ -420,7 +420,7 @@ class WatchFaceView extends WatchUi.WatchFace {
 
     // ─── Data row: Body Battery | Stress | Calories ───────────────────────────
     private function _drawDataRow(dc as Graphics.Dc) as Void {
-        var dataY  = DATA_Y;
+        var dataY  = DATA_Y - 2;
         var bbVal  = _bodyBattery != null ? (_bodyBattery > 99 ? 99 : _bodyBattery) : null;
         var bbStr  = bbVal != null ? bbVal.toString() + "%" : "--%";
         _drawBatteryIcon(dc, D1 - 17, dataY + 2);
