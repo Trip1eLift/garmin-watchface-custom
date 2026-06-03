@@ -3,6 +3,7 @@ import Toybox.Application;
 import Toybox.Complications;
 import Toybox.Graphics;
 import Toybox.Lang;
+import Toybox.Math;
 import Toybox.System;
 import Toybox.Time;
 import Toybox.Time.Gregorian;
@@ -148,6 +149,7 @@ class WatchFaceView extends WatchUi.WatchFace {
         _drawDataRow(dc);
         _drawBottomRow(dc);
         _drawNftArc(dc);
+        _drawAltTzMarker(dc);
     }
 
     // ─── NFT outer arc ────────────────────────────────────────────────────────
@@ -169,6 +171,38 @@ class WatchFaceView extends WatchUi.WatchFace {
             dc.drawArc(SCR_CX, SCR_CY, NFT_R, Graphics.ARC_CLOCKWISE, 90, 90 - sweep);
         }
         dc.setPenWidth(1);
+    }
+
+    // ─── Alt TZ marker: blue triangle pointing to Taipei time on 24h ring ────
+    private function _drawAltTzMarker(dc as Graphics.Dc) as Void {
+        // Use UTC epoch seconds (Time.now().value()) — avoids timeZoneOffset unreliability.
+        // Taipei = UTC+8: add 480 min to UTC minutes-of-day.
+        var utcSec   = Time.now().value();
+        var secOfDay = (utcSec % 86400).toNumber();
+        if (secOfDay < 0) { secOfDay += 86400; }
+        var taipeiMins = (secOfDay / 60 + 480) % 1440;
+        var taipeiH  = taipeiMins.toFloat() / 60.0;
+
+        // Map to arc angle (90° = midnight/top, clockwise)
+        var angleDeg = 90.0 - (taipeiH / 24.0 * 360.0);
+        var a  = Math.toRadians(angleDeg);
+        var ca = Math.cos(a);
+        var sa = Math.sin(a);
+
+        // Triangle tip points outward (toward bezel); base straddles the arc
+        var tipR  = NFT_R + 2;   // 226 — just inside screen edge
+        var baseR = NFT_R - 6;   // 218
+        var hw    = 5;
+
+        var tipX   = (SCR_CX + tipR  * ca).toNumber();
+        var tipY   = (SCR_CY - tipR  * sa).toNumber();
+        var leftX  = (SCR_CX + baseR * ca + hw * sa).toNumber();
+        var leftY  = (SCR_CY - baseR * sa + hw * ca).toNumber();
+        var rightX = (SCR_CX + baseR * ca - hw * sa).toNumber();
+        var rightY = (SCR_CY - baseR * sa - hw * ca).toNumber();
+
+        dc.setColor(0x4CA2B9, Graphics.COLOR_TRANSPARENT);
+        dc.fillPolygon([[tipX, tipY], [leftX, leftY], [rightX, rightY]]);
     }
 
     // ─── Date ─────────────────────────────────────────────────────────────────
