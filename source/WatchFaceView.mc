@@ -222,9 +222,6 @@ class WatchFaceView extends WatchUi.WatchFace {
         if (_nftMinutes != null && _nftMinutes > 0) {
             hours = _nftMinutes / 60.0;
             if (hours > 24.0) { hours = 24.0; }
-        } else {
-            var t = System.getClockTime();
-            hours = t.hour.toFloat() + t.min / 60.0;
         }
         if (hours > 0.0) {
             var sweep = (hours / 24.0 * 360.0).toNumber();
