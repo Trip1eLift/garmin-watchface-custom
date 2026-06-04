@@ -147,7 +147,7 @@ class WatchFaceView extends WatchUi.WatchFace {
             _refreshComplications();
             _drawDate(dc);
             _drawTimeSleep(dc);
-            _drawBottomRow(dc);
+            _drawBottomRowAod(dc);
             return;
         }
         _refreshComplications();
@@ -516,6 +516,21 @@ class WatchFaceView extends WatchUi.WatchFace {
         var bmp = Application.loadResource(Rez.Drawables.IconHeartRate) as WatchUi.BitmapResource;
         if (bmp != null) {
             dc.drawBitmap(icx - 16, BOT_Y - 15, bmp);  // 33px icon, shifted down 2px
+        } else {
+            _drawHeart(dc, icx, BOT_Y);
+        }
+        dc.setColor(C_NFT_ARC, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(icx + 26, BOT_Y, Graphics.FONT_MEDIUM, hrStr,
+                    Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+
+    // AOD bottom row: outline heart icon + solid HR digit
+    private function _drawBottomRowAod(dc as Graphics.Dc) as Void {
+        var hrStr = _heartRate != null ? _heartRate.toString() : "--";
+        var icx   = SCR_CX - 38;
+        var bmp = Application.loadResource(Rez.Drawables.IconHeartRateAod) as WatchUi.BitmapResource;
+        if (bmp != null) {
+            dc.drawBitmap(icx - 16, BOT_Y - 15, bmp);
         } else {
             _drawHeart(dc, icx, BOT_Y);
         }

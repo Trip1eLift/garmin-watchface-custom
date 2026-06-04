@@ -16,4 +16,5 @@
     <bitmap id="IconCalories"         filename="calories_icon.png"/>
     <bitmap id="IconStress"           filename="stress_icon.png"/>
     <bitmap id="IconHeartRate"        filename="heartrate_icon.png"/>
+    <bitmap id="IconHeartRateAod"     filename="heartrate_aod_icon.png"/>
 </drawables>
