@@ -47,6 +47,11 @@ const BOT_Y   = 406;    // symmetric with DATE_Y
 const BATT_H  = 6;
 const TIME_CX = 227;    // true screen center — digits fill the widest zone
 const SEC_X   = 405;    // seconds + msg bubble — pushed to right edge of circle
+const SEC_MSG_Y  = 186;   // message bubble center Y — fixed, not derived from font height
+const SEC_AMPM_Y = 266;   // AM/PM center Y
+const SEC_Y      = 226;   // seconds center Y
+const AOD_MSG_Y  = 184;   // AOD message bubble center Y
+const AOD_AMPM_Y = 268;   // AOD AM/PM center Y
 
 // Info row — mirrors data row exactly (same D1/D2/D3 centers, same dividers)
 const INFO_CELL1_CX = 95;
@@ -89,6 +94,7 @@ class WatchFaceView extends WatchUi.WatchFace {
     private var _stress;
     private var _nftMinutes;
     private var _timeFont as Graphics.VectorFont?;
+    private var _isAsleep as Boolean = false;
 
     function initialize() {
         WatchFace.initialize();
@@ -106,9 +112,6 @@ class WatchFaceView extends WatchUi.WatchFace {
     function onLayout(dc as Graphics.Dc) as Void {
         _timeFont = null;
         if (!(Graphics has :getVectorFont)) { return; }
-        // Face name is the Font ID from device profile, not the TTF family name.
-        // "BionicBold" = FONT_NUMBER_HOT face (Bionic_Bold_Number_Only.ttf).
-        // "RobotoCondensedBold" is the fallback for simulator/other devices.
         _timeFont = Graphics.getVectorFont(
             {:face => ["BionicBold", "RobotoCondensedBold"], :size => 210});
     }
@@ -138,9 +141,16 @@ class WatchFaceView extends WatchUi.WatchFace {
 
     // ─── Main draw — NFT arc is last so it's always on top ───────────────────
     function onUpdate(dc as Graphics.Dc) as Void {
-        _refreshComplications();
         dc.setColor(C_BG, C_BG);
         dc.clear();
+        if (_isAsleep) {
+            _refreshComplications();
+            _drawDate(dc);
+            _drawTimeSleep(dc);
+            _drawBottomRow(dc);
+            return;
+        }
+        _refreshComplications();
         _drawDate(dc);
         _drawGrid(dc);
         _drawInfoRow(dc);
@@ -150,6 +160,57 @@ class WatchFaceView extends WatchUi.WatchFace {
         _drawBottomRow(dc);
         _drawNftArc(dc);
         _drawAltTzMarker(dc);
+    }
+
+    // ─── Sleep / AOD mode ────────────────────────────────────────────────────
+    function onEnterSleep() as Void {
+        _isAsleep = true;
+        WatchUi.requestUpdate();
+    }
+
+    function onExitSleep() as Void {
+        _isAsleep = false;
+        WatchUi.requestUpdate();
+    }
+
+    // Routes to onUpdate so the _isAsleep branch handles rendering.
+    function onPartialUpdate(dc as Graphics.Dc) as Void {
+        _isAsleep = true;
+        onUpdate(dc);
+    }
+
+    // HH:MM + message bubble + PM at same positions as high-power face, no seconds
+    private function _drawTimeSleep(dc as Graphics.Dc) as Void {
+        var t    = System.getClockTime();
+        var h12  = t.hour % 12;
+        if (h12 == 0) { h12 = 12; }
+        var hStr = _pad(h12);
+        var mStr = _pad(t.min);
+        var ampm = t.hour < 12 ? "AM" : "PM";
+
+        var timeFont  = (_timeFont != null) ? _timeFont : Graphics.FONT_NUMBER_HOT;
+        var colonFont = Graphics.FONT_NUMBER_HOT;
+        var timeY     = TIME_Y + 7;
+        var justify   = Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER;
+
+        var x  = 12;
+        var hW = dc.getTextWidthInPixels(hStr, timeFont);
+        var cW = dc.getTextWidthInPixels(":",  colonFont);
+
+        _drawOutlineText(dc, x, timeY, timeFont, hStr, justify, C_WHITE);
+        x += hW;
+        _drawOutlineText(dc, x, timeY - 10, colonFont, ":", justify, C_DIM);
+        x += cW;
+        _drawOutlineText(dc, x, timeY, timeFont, mStr, justify, C_ORANGE);
+
+        var cfg   = System.getDeviceSettings();
+        var notif = 0;
+        if (cfg has :notificationCount) { notif = cfg.notificationCount; }
+        _drawMsgBubble(dc, SEC_X - 7, AOD_MSG_Y, notif);
+
+        dc.setColor(C_YELLOW, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(SEC_X - 1, AOD_AMPM_Y, Graphics.FONT_TINY, ampm,
+                    Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     // ─── NFT outer arc ────────────────────────────────────────────────────────
@@ -167,6 +228,12 @@ class WatchFaceView extends WatchUi.WatchFace {
         }
         if (hours > 0.0) {
             var sweep = (hours / 24.0 * 360.0).toNumber();
+            // Black outline: 5px border on each side → pen = NFT_PEN + 10
+            dc.setPenWidth(NFT_PEN + 10);
+            dc.setColor(C_BG, Graphics.COLOR_TRANSPARENT);
+            dc.drawArc(SCR_CX, SCR_CY, NFT_R, Graphics.ARC_CLOCKWISE, 90, 90 - sweep);
+            // Colored arc on top
+            dc.setPenWidth(NFT_PEN);
             dc.setColor(C_NFT_ARC, Graphics.COLOR_TRANSPARENT);
             dc.drawArc(SCR_CX, SCR_CY, NFT_R, Graphics.ARC_CLOCKWISE, 90, 90 - sweep);
         }
@@ -287,7 +354,7 @@ class WatchFaceView extends WatchUi.WatchFace {
 
         var infoY = INFO_Y - 2;
         // Cell 1: 40px icon, text right of icon
-        _drawWeatherIcon(dc, INFO_CELL1_CX - 12, infoY + 5, condition, isNight);
+        _drawWeatherIcon(dc, INFO_CELL1_CX - 12, infoY - 1, condition, isNight);
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(INFO_CELL1_CX + 16, infoY, Graphics.FONT_TINY, tempStr,
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
@@ -332,7 +399,24 @@ class WatchFaceView extends WatchUi.WatchFace {
         }
     }
 
-    // ─── Time: Bionic vector font at 170px (same style as FONT_NUMBER_HOT, larger) ──
+    // Outline-only text: 8-offset stroke layer then smaller black at center to hollow.
+    // Base position is shifted left by t so the rightmost offset stays at the original boundary.
+    private function _drawOutlineText(dc as Graphics.Dc, x as Number, y as Number,
+                                      font, text as String, justify as Number,
+                                      color as Number) as Void {
+        var t  = 2;
+        var px = x - t;
+        var dxArr = [-t, 0, t, -t, t, -t, 0, t];
+        var dyArr = [-t, -t, -t,  0, 0,  t, t, t];
+        dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+        for (var i = 0; i < 8; i++) {
+            dc.drawText(px + dxArr[i], y + dyArr[i], font, text, justify);
+        }
+        dc.setColor(C_BG, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(px, y, font, text, justify);
+    }
+
+    // ─── Time: Bionic vector font at 190px, solid fill ───────────────────────
     private function _drawTime(dc as Graphics.Dc) as Void {
         var t    = System.getClockTime();
         var h12  = t.hour % 12;
@@ -341,58 +425,40 @@ class WatchFaceView extends WatchUi.WatchFace {
         var mStr = _pad(t.min);
         var ampm = t.hour < 12 ? "AM" : "PM";
 
-        // Use vector font (Bionic 170px) when available, else fall back to FONT_NUMBER_HOT
-        var timeFont = (_timeFont != null) ? _timeFont : Graphics.FONT_NUMBER_HOT;
-        // Shift draw anchor below screen center: font line-height includes descent space
-        // below number glyphs, so cap height visually sits above the VCENTER point.
-        var timeY = TIME_Y + 7;
-
-        // Colon uses FONT_NUMBER_HOT (~159px) — smaller than digit font, same Bionic style
+        var timeFont  = (_timeFont != null) ? _timeFont : Graphics.FONT_NUMBER_HOT;
         var colonFont = Graphics.FONT_NUMBER_HOT;
+        var timeY     = TIME_Y + 7;
+        var justify   = Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER;
 
         var x  = 12;
         var hW = dc.getTextWidthInPixels(hStr, timeFont);
         var cW = dc.getTextWidthInPixels(":",  colonFont);
 
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(x, timeY, timeFont, hStr,
-                    Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x, timeY, timeFont, hStr, justify);
         x += hW;
         dc.setColor(C_DIM, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(x, timeY - 10, colonFont, ":",
-                    Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x, timeY - 10, colonFont, ":", justify);
         x += cW;
         dc.setColor(C_ORANGE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(x, timeY, timeFont, mStr,
-                    Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x, timeY, timeFont, mStr, justify);
 
-        // Right column: pin msg top to digit top, :SS bottom to digit bottom, ampm in middle
-        var msgH  = 23;
-        var ampmH = dc.getFontHeight(Graphics.FONT_TINY);
-        var secH  = dc.getFontHeight(Graphics.FONT_MEDIUM);
-        var digitH   = dc.getFontHeight(timeFont);
-        var digitTop = timeY - digitH / 2;
-        var digitBot = timeY + digitH / 2;
-
-        var msgCY  = digitTop + msgH / 2;
-        var secCY  = digitBot - secH / 2;
-        var ampmCY = (digitTop + msgH + digitBot - secH) / 2;
-
+        // Right column: hardcoded positions so they never shift with font size changes
         var cfg   = System.getDeviceSettings();
         var notif = 0;
         if (cfg has :notificationCount) { notif = cfg.notificationCount; }
-        _drawMsgBubble(dc, SEC_X - 7, msgCY + 48, notif);
+        _drawMsgBubble(dc, SEC_X - 7, SEC_MSG_Y, notif);
 
         dc.setColor(C_YELLOW, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(SEC_X - 1, ampmCY + 50, Graphics.FONT_TINY, ampm,
+        dc.drawText(SEC_X - 1, SEC_AMPM_Y, Graphics.FONT_TINY, ampm,
                     Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        // Seconds: small grey ":" + red digits, centered together at SEC_X+5
+        // Seconds: small grey ":" + red digits, centered together at SEC_X
         var secStr  = _pad(t.sec);
         var sColW   = dc.getTextWidthInPixels(":", Graphics.FONT_SMALL);
         var sDigW   = dc.getTextWidthInPixels(secStr, Graphics.FONT_MEDIUM);
         var sStartX = SEC_X + 3 - (sColW + sDigW) / 2;
-        var sY      = secCY - 85;
+        var sY      = SEC_Y;
         dc.setColor(C_DIM, Graphics.COLOR_TRANSPARENT);
         dc.drawText(sStartX, sY - 2, Graphics.FONT_SMALL, ":",
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
@@ -423,7 +489,7 @@ class WatchFaceView extends WatchUi.WatchFace {
         var dataY  = DATA_Y - 2;
         var bbVal  = _bodyBattery != null ? (_bodyBattery > 99 ? 99 : _bodyBattery) : null;
         var bbStr  = bbVal != null ? bbVal.toString() + "%" : "--%";
-        _drawBatteryIcon(dc, D1 - 17, dataY + 2);
+        _drawBatteryIcon(dc, D1 - 17, dataY + 3);
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(D1 + 6, dataY, Graphics.FONT_TINY, bbStr,
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
@@ -432,11 +498,11 @@ class WatchFaceView extends WatchUi.WatchFace {
         var stStr  = stVal != null ? stVal.toString() : "--";
         _drawCrosshair(dc, D2 - 24, dataY + 2);
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(D2 + 4, dataY, Graphics.FONT_TINY, stStr,
+        dc.drawText(D2 + 1, dataY, Graphics.FONT_TINY, stStr,
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
         var calStr = _calories != null ? _calories.toString() : "--";
-        _drawCaloriesIcon(dc, D3 - 57, dataY + 2);
+        _drawCaloriesIcon(dc, D3 - 57, dataY + 3);
         dc.setColor(C_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(D3 - 39, dataY, Graphics.FONT_TINY, calStr,
                     Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
@@ -449,7 +515,7 @@ class WatchFaceView extends WatchUi.WatchFace {
         var icx = SCR_CX - 38;
         var bmp = Application.loadResource(Rez.Drawables.IconHeartRate) as WatchUi.BitmapResource;
         if (bmp != null) {
-            dc.drawBitmap(icx - 27, BOT_Y - 26, bmp);  // 54px icon centered at (icx, BOT_Y+1)
+            dc.drawBitmap(icx - 16, BOT_Y - 15, bmp);  // 33px icon, shifted down 2px
         } else {
             _drawHeart(dc, icx, BOT_Y);
         }
@@ -483,33 +549,33 @@ class WatchFaceView extends WatchUi.WatchFace {
         }
         var bmp = Application.loadResource(rezId) as WatchUi.BitmapResource;
         if (bmp != null) {
-            dc.drawBitmap(cx - 20, cy - 20, bmp);
+            dc.drawBitmap(cx - 17, cy - 17, bmp);
         }
     }
 
     // ─── Data icons ───────────────────────────────────────────────────────────
 
-    // Body battery icon (33px icons8 PNG bitmap)
+    // Body battery icon (26px SVG-rendered PNG)
     private function _drawBatteryIcon(dc as Graphics.Dc, cx as Number, cy as Number) as Void {
         var bmp = Application.loadResource(Rez.Drawables.IconBodyBattery) as WatchUi.BitmapResource;
         if (bmp != null) {
-            dc.drawBitmap(cx - 16, cy - 16, bmp);
+            dc.drawBitmap(cx - 13, cy - 13, bmp);
         }
     }
 
-    // Stress icon (33px icons8 PNG bitmap)
+    // Stress icon (27px SVG-rendered PNG)
     private function _drawCrosshair(dc as Graphics.Dc, cx as Number, cy as Number) as Void {
         var bmp = Application.loadResource(Rez.Drawables.IconStress) as WatchUi.BitmapResource;
         if (bmp != null) {
-            dc.drawBitmap(cx - 16, cy - 16, bmp);
+            dc.drawBitmap(cx - 13, cy - 13, bmp);
         }
     }
 
-    // Calories icon (33px icons8 PNG bitmap)
+    // Calories icon (34px SVG-rendered PNG)
     private function _drawCaloriesIcon(dc as Graphics.Dc, cx as Number, cy as Number) as Void {
         var bmp = Application.loadResource(Rez.Drawables.IconCalories) as WatchUi.BitmapResource;
         if (bmp != null) {
-            dc.drawBitmap(cx - 16, cy - 16, bmp);
+            dc.drawBitmap(cx - 17, cy - 17, bmp);
         }
     }
 
